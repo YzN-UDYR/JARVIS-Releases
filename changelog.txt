@@ -1,4 +1,4 @@
-[SÜRÜM GÜNCELLEME NOTLARI - v1.1.10]
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.11]
 Efendim, bu güncellemede sistem kararlılığı ve etkileşim performansı en üst düzeye çıkarılmıştır:
 - Hafıza koruma altyapısı (AppData Relocation) devreye alındı. Jarvis'in hafıza veri tabanı (chroma_db) ve tüm sohbet geçmişleri artık Windows yerel `%LOCALAPPDATA%/JARVIS` klasöründe saklanır. Bu sayede uygulama silindiğinde veya güncellendiğinde hafıza hiçbir şekilde silinmez ve kaybolmaz. Eski hafıza dosyaları otomatik olarak yeni konuma taşınır (migrate edilir).
 - İnteraktif Hologram Çekim Alanı (Magnetic Repulsion Forcefield) entegre edildi. Fare imleci holograma yaklaştığında (120px sınırında) parçacıklar imlecin önünden yumuşak ve esnek bir fiziksel enerji kalkanı gibi itilerek uzaklaşır.
