@@ -1,0 +1,105 @@
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.10]
+Efendim, bu güncellemede sistem kararlılığı ve etkileşim performansı en üst düzeye çıkarılmıştır:
+- Hafıza koruma altyapısı (AppData Relocation) devreye alındı. Jarvis'in hafıza veri tabanı (chroma_db) ve tüm sohbet geçmişleri artık Windows yerel `%LOCALAPPDATA%/JARVIS` klasöründe saklanır. Bu sayede uygulama silindiğinde veya güncellendiğinde hafıza hiçbir şekilde silinmez ve kaybolmaz. Eski hafıza dosyaları otomatik olarak yeni konuma taşınır (migrate edilir).
+- İnteraktif Hologram Çekim Alanı (Magnetic Repulsion Forcefield) entegre edildi. Fare imleci holograma yaklaştığında (120px sınırında) parçacıklar imlecin önünden yumuşak ve esnek bir fiziksel enerji kalkanı gibi itilerek uzaklaşır.
+- Teşhis Lazer Kilidi (Diagnostic HUD Reticle) eklendi. Fare imleci 3D parçacıklardan birine yaklaştığında, imleçten o parçacığa doğru elektrikli bir lazer ışığı uzanır ve parçacığın etrafında dönen bir teşhis reticle halkası ile kilitlenen koordinatların derinlik (Z) verileri ekranda anlık olarak gösterilir.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.9]
+Efendim, bu güncellemede sizin tarafınızdan sistem üzerinde görsel akıcılık ve 3D derinlik seviyesi artırılmıştır:
+- Çok eksenli 3D yuvarlanma (tumbling/gyroscope) animasyonu entegre edildi. Küre artık sadece kendi etrafında dönmeyerek horizontal ve dikey eksenlerde de yavaşça süzülerek gerçek bir jiroskop etkisi sunar.
+- Kuantum plazma dalgalanması (multi-octave ripple waves) eklendi. Parçacık dalgalanmalarına ikinci bir gürültü frekansı karıştırılarak küre yüzeyindeki titreşim hareketleri son derece detaylı ve asil hale getirildi.
+- changelog.txt dosyası sürüm notları kronolojik olarak tersine (en yeni en üstte) sıralandı.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.8]
+Efendim, bu güncellemede sizin tarafınızdan sistem üzerinde görsel çekirdek boyutlandırması ve otonom güncelleyici yapısı entegre edilmiştir:
+- Holografik görselleştirici çekirdek nokta sayısı 800'e çıkarıldı ve genel boyutu (baseRadius) 240'a büyütülerek daha gösterişli hale getirildi.
+- Jarvis konuşurken daireler çizen Torus dönüşümü iptal edilerek, parçacık bulutu tamamen küre şeklinde kilitlendi ve doğrudan sese duyarlı dalgalanma/titreşim hareketine odaklanıldı.
+- Karışıklığı önlemek adına 3D yörünge halkaları ve zemin grid çizgileri kaldırılarak görsel sadelik ve şıklık sağlandı.
+- Sıfır tıklamalı otonom güncelleme indirime/kurulumu entegre edildi: Jarvis güncelleme duyurusunu bitirdiği anda arka planda kurulum dosyasını indirip otomatik olarak kurar ve uygulamayı yeniden başlatır.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.7]
+Efendim, bu güncellemede sizin tarafınızdan sistem üzerinde birçok yeni özellik ve kod düzenlemeleri entegre edilmiştir:
+- Canlı ses aktivasyonu, ses susturma ve konuşma döngüleri kararlı hale getirildi.
+- Kod yardımcısı, dosya arama ve çalıştırma otonom algoritmaları geliştirildi.
+- Sistem genelinde altyapı iyileştirmeleri ve performans düzeltmeleri yapıldı.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.4]
+JARVIS başarıyla yeni etkileşimli özellikler, sesli aktivasyon ve Windows entegrasyonu sürümüne güncellenmiştir! Bu sürümdeki yeni yetenekler şunlardır:
+
+1. Otonom Spotify OAuth Callback Alıcısı (Hands-free Auth):
+   - Spotify giriş işlemi artık konsolda veri girişine ihtiyaç duymaz. Sistem yerelde 8888 portunda asenkron bir HTTP sunucusu açar, tarayıcıdan gelen yönlendirmeyi otomatik yakalar ve yetkilendirmeyi tamamlar.
+
+2. WebHUD Canlı Ses Görselleştirici (Audio Visualizer Canvas):
+   - Web arayüzündeki holografik çekirdek (Concentric Core), Python asenkron ses yöneticisinden gelen gerçek zamanlı mikrofon ve hoparlör RMS ses seviyelerine göre parlar ve döner.
+
+3. Windows Sistem Tepsisi (System Tray) Entegrasyonu:
+   - JARVIS arka planda çalışırken sistem tepsisinde mavi ikon olarak görünür. İkona sağ tıklayarak arayüzü açabilir, mikrofonu susturabilir/açabilir veya uygulamadan çıkış yapabilirsiniz.
+
+4. Çevrimdışı Sesli Aktivasyon / Wake Word (Hey Jarvis):
+   - Mikrofon sessizdeyken bile yerel enerji eşiği (VAD) yardımıyla "Jarvis" veya "Hey Jarvis" dediğinizi çevrimdışı analiz eder ve otomatik olarak mikrofonu aktif ederek "Efendim?" şeklinde cevap verir.
+
+5. Gelişmiş Kayıt Defteri (Registry) Python Bulucu:
+   - Windows Kayıt Defteri sorguları aracılığıyla Anaconda veya Microsoft Store dahil kurulu Python sürümlerini PATH değişkeninde olmasalar dahi otomatik tespit eder.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.3]
+JARVIS başarıyla yeni kararlılık, kod yazma/çalıştırma ve Spotify yenileme belirteci düzeltmeleri sürümüne güncellenmiştir! Bu sürümdeki yeni yetenekler ve düzeltmeler şunlardır:
+
+1. Bağımsız Python Çalıştırıcı Entegrasyonu (Frozen Mutex Çözümü):
+   - Derlenmiş modda (JARVIS.exe) Python kodlarını çalıştırırken veya test ederken ortaya çıkan "CORE INSTANCE DETECTED" (Zaten çalışan bir örnek algılandı) hatası giderilmiştir.
+   - Sistem artık otonom olarak bilgisayarınızdaki gerçek python.exe yorumlayıcısını bulur ve betikleri JARVIS ana programından tamamen izole şekilde çalıştırır.
+
+2. Kod Yardımcısı İyileştirmeleri (Code Helper Fix):
+   - actions/code_helper.py içerisindeki tüm eksik yardımcı fonksiyonlar yazılmış ve Gemini API istemcisi tamamen kararlı hale getirilmiştir.
+   - Kod yazma ve düzenleme komutlarınız artık dosya oluşturularak masaüstündeki "JarvisProjects" klasörüne kaydedilir ve gerçekten çalıştırılarak doğruluğu test edilir.
+
+3. Protokol Güvenliği (execute_protocol Fix):
+   - Stark ders çalışma veya sentinel protokolleri başlatılırken parametrelerin boş gelmesi durumunda oluşan arka plan iş parçacığı çökmesi (NoneType AttributeError) tamamen engellenmiştir.
+
+4. Spotify Yenileme Belirteci Kararlılığı (invalid_grant Düzeltmesi):
+   - Spotify API'sinin 6 aylık kullanım sonrasında refresh token (yenileme belirteci) süresinin dolması sonucu döndürdüğü "invalid_grant" hatası yakalanarak otonom çözüm getirilmiştir.
+   - Hata durumunda sistem eski önbelleği temizler ve Spotify komutu verildiğinde sizi tarayıcı üzerinden doğrudan yetkilendirme ekranına yönlendirerek kesintisiz müzik kontrolü sağlar.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.1]
+JARVIS başarıyla yeni zeka ve dizi/film oynatma entegrasyonu sürümüne güncellenmiştir! Efendim, bu zeka katmanında eklenen yeni yeteneklerim şunlardır:
+
+1. Otonom Yapılandırma Taşıma (Migration):
+   - Projenin yerel "config" klasörü altında credentials.json veya api_keys.json varsa, bunları otomatik olarak AppData klasörünüze taşırım. Kurulum sihirbazı döngüsü tamamen çözülmüştür.
+
+2. Korsan Dizi & Film İzleme Entegrasyonu (play_movie):
+   - Herhangi bir film veya dizi açmamı istediğinizde (örn: "Matrix filmini aç"), sessizce "hdfilmcehennemi", "webteizle", "webteizle.info" ve "dizipal" sitelerini tarar ve doğrudan oynatma linkini tarayıcınızda açarım.
+
+3. Akıllı Arama Kişiselleştirmesi:
+   - Profil hafızamdaki cinsiyet ve yaş bilgilerinize göre aramalarınızı optimize ederim. Örneğin, erkek kullanıcı için "kolye" ararken otomatik olarak "erkek kolyesi" sorgusu gerçekleştiririm.
+
+4. İlk Kurulum Profilleme:
+   - İlk açılışta kendimi sadece "JARVIS" olarak tanıtıp, size hitap biçimimi, ilgi alanlarınızı ve kuralları öğrenmek adına adınız, yaşınız, cinsiyetiniz gibi bilgileri sorarak hafızama kaydederim.
+
+5. Periyodik Arka Plan Güncelleme Kontrolü:
+   - Yeni güncellemeleri asistanınız açık kaldığı sürece arka planda her 1 saatte bir otomatik denetler ve size bildiririm.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.0]
+JARVIS başarıyla yeni Mark-XXX Standalone mimarisine güncellenmiştir! Efendim, bu güncellemede sistemime eklenen ve bilmeniz gereken yeni yeteneklerim şunlardır:
+
+1. Sıfır Bağımlılık ve Kararlı Standalone Çalışma (.exe):
+   - Artık beni çalıştırmak için bilgisayarınızda Python, Node.js veya npm kurulu olmasına gerek yok! Her şeyi kendi içimde barındırıyorum.
+   - DLL ve C++ runtime bağımlılıklarını Side-by-Side yerel yüklemeyle çözdüm (msvcp140.dll ve vcruntime140.dll doğrudan paketimin içinde).
+
+2. Güvenli AppData Roaming Yapılandırması:
+   - Tüm gizli API anahtarlarınız, Spotify entegrasyonu bilgileriniz ve Google OAuth izinleriniz "C:\Users\<Kullanıcı>\AppData\Roaming\JARVIS\" klasöründe saklanır.
+   - Bu sayede beni bilgisayarınızda hangi klasörden başlatırsanız başlatın, API anahtarı sorma penceresi bir daha asla çıkmaz!
+
+3. Akıllı Yol ve Masaüstü Çözümlemesi:
+   - Türkçe veya İngilizce Windows işletim sistemi kullanmanız fark etmeksizin, Windows Kayıt Defteri'ni otonom olarak sorgulayarak "Masaüstü" (Desktop) klasörünüzü anında bulabiliyorum.
+   - OneDrive masaüstü yönlendirmelerine karşı da tamamen bağışıklık kazandım. "JARVIS FILES" klasörünüzü her zaman hatasız oluştururum.
+
+4. İki Yönlü Sürükle-Bırak Entegrasyonu:
+   - Google Akıllı Ev entegrasyonu için "credentials.json" dosyasını doğrudan Windows üzerinde "JARVIS.exe" ikonumun üstüne sürükleyip bırakabilirsiniz! Sistemim bunu otomatik yakalayıp yapılandırır.
+   - Aynı işlemi Web arayüzü (HUD) üzerinden sürükleyerek de yapabilirsiniz.
+
+5. "Hayalet Tarayıcı" (Ghost Browser) ve Görsel Analiz Yeteneği:
+   - Headless Playwright tarayıcı altyapım sayesinde artık arka planda web sitelerini sessizce açıp gezebiliyorum.
+   - Sayfalardaki GDPR çerez pencerelerini ve reklamları otomatik temizleyip, ekran görüntülerini anında kendi görsel işlemci merkezime (inline_data) besleyerek siteleri kendi gözlerimle analiz edebiliyorum!
+
+6. Kararlı Bing Arama Motoru ve Base64 URL Çözücü:
+   - Google ve DuckDuckGo gibi bot korumalı motorlar yerine, yüksek kararlılık sunan Bing Playwright motorunu kullanıyorum.
+   - Bing'in yönlendirme adreslerindeki karmaşık base64 url kodlamalarını gerçek zamanlı çözerek temiz hedef adresleri anında bulabiliyorum.
