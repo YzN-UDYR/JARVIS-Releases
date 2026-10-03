@@ -1,12 +1,18 @@
-Sürüm Notları (v1.1.11)
-Bu güncelleme ile JARVIS'in etkileşim protokolleri optimize edilmiş ve arka plan servis yükü azaltılmıştır:
-* **Özellik ve Sürüm Sorgularının Ayrılması:**
-  * Genel özellik sorgularında ("özelliklerin neler", "neler yapabilirsin") tüm sistem yetenekleri detaylı olarak anlatılır.
-  * Yeni güncelleme sorgularında ("yeni özelliklerin neler", "yenilikler neler") local `changelog.txt` dosyası okunarak en son sürüm notları sesli özetlenir ve dosya masaüstünde görsel olarak açılır.
-* **Visual Mind (Proaktif Ekran Analizi) Kapatıldı:**
-  * Arka planda çalışan ve periyodik olarak ekran görüntüsü alan `proactive_screen_loop` görevi, sistem kaynaklarını optimize etmek ve kullanıcı gizliliğini korumak adına tamamen kaldırılmıştır.
-* **Sistem Kararlılığı:**
-  * Kod derleme ve standalone (.exe) paketleme uyumlulukları artırılmıştır.
+[SÜRÜM GÜNCELLEME NOTLARI - v1.2.6]
+Efendim, bu güncellemede Mark-XXX yapay zeka çekirdeği ve otonom sistem kabiliyetleri en üst düzeye çıkarılmıştır:
+- NVIDIA NIM bağlantı motoru güncellendi; aktif ve yüksek hızlı Llama 3.2 Vision modellerine geçiş yapılarak otomatik model yedekleme zinciri (fallback) devreye alındı.
+- Yapay zeka mod geçişlerinde (Gemini <-> NVIDIA) İngilizce sesli ve görsel anons sistemi entegre edildi ("Connected to Gemini" / "Connected to NVIDIA").
+- 3D Holografik Çekirdek 1000 kat geliştirildi; jiroskopik koordinat halkaları, sinaptik enerji arkları ve fare üzerine geldiğinde kilitlenen interaktif Synapse Lock HUD telemetrisi eklendi. JARVIS bir görev icra ederken küre adaptif işlem moduna geçer.
+- F7 ve Arayüz İnterrupt (Söz Kesme) motoru %100 kesin çalışacak şekilde yeniden yapılandırıldı; bekleyen tüm ses blokları salisesinde boşaltılarak anında sessizlik ve aktif dinleme sağlanır.
+- Windows 11 Güç Yönetimi ve Ekran Kararmasını Önleme (power_management) yeteneği eklendi; ekran kararma süreleri sıfırlanabilir ve Nihai Performans (Ultimate Performance) güç modu otonom etkinleştirilebilir.
+- Çoklu dosya sürükle-bırak desteği ve sağ üst köşe Belge Tepsisi (Document Tray) entegre edildi; aynı anda 6 adet PDF analiz edilip tüm formülleri detaylı, tablolu ve açıklamalı bir PDF raporu halinde doğrudan masaüstünüze oluşturulabilir.
+- Sol paneldeki Protokoller bölümü interaktif canlı görev takip paneline dönüştürüldü; çalışan görevler detaylarıyla izlenebilir ve [GÖREVİ SONLANDIR] butonuyla anında iptal edilebilir.
+- Audio FX durum senkronizasyon hatası ve Gemini 1011 bağlantı kopması koruması (BaseExceptionGroup) giderildi.
+
+[SÜRÜM GÜNCELLEME NOTLARI - v1.1.11]
+Efendim, bu güncellemede sistem özellikleri ve arka plan görevleri optimize edilmiştir:
+- Özellik sorgulama protokolleri güncellendi. Artık genel yeteneklerinizi sorduğunuzda ("özelliklerin neler", "neler yapabilirsin") tüm özellikler tam liste olarak seslendirilirken, sürüm güncellemeleri sorulduğunda ("yeni özelliklerin neler", "yenilikler neler") güncel changelog.txt dosyası masaüstünde açılır ve son sürüm notları sesli özetlenir.
+- Arka planda çalışan otonom ekran analizi (Visual Mind) tamamen devre dışı bırakıldı ve sistem kararlılığı ile kaynak tasarrufu artırıldı.
 
 [SÜRÜM GÜNCELLEME NOTLARI - v1.1.10]
 Efendim, bu güncellemede sistem kararlılığı ve etkileşim performansı en üst düzeye çıkarılmıştır:
